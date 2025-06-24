@@ -1,0 +1,233 @@
+/* Critical CSS fixes to ensure proper rendering */
+
+/* Reset and base styles */
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', 'Inter', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #ffffff;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix viewport and layout issues */
+#__next {
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* Ensure main container takes full height */
+.main-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Left panel (hero section) */
+.w-\[40vw\] {
+  width: 40vw;
+  min-width: 400px;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right panel (form section) */
+.w-\[60vw\] {
+  width: 60vw;
+  min-width: 500px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Form container adjustments */
+.mt-\[17rem\].pl-\[12vw\] {
+  margin-top: 0;
+  padding-left: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Input field improvements */
+.input_input_container___zfQG {
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.input_input_container___zfQG:hover {
+  border-color: #4965d2;
+}
+
+.input_input_container___zfQG.input_has_focus__jQObH {
+  border-color: #4965d2;
+  box-shadow: 0 0 0 3px rgba(73, 101, 210, 0.1);
+}
+
+.input_input__nPe_8 {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.6rem;
+  color: #333;
+  padding: 1rem 0;
+}
+
+.input_label__FUu5J {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: #666;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  padding: 0 0.4rem;
+}
+
+.input_input_container___zfQG.input_has_value__QmYe9 .input_label__FUu5J,
+.input_input_container___zfQG.input_has_focus__jQObH .input_label__FUu5J {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #4965d2;
+}
+
+/* Password toggle icon */
+.input_input_container___zfQG .flex.flex-row {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Button styling */
+.button_button__fXRS9 {
+  width: 100%;
+  height: 4.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #4965d2;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 2rem 0;
+}
+
+.button_button__fXRS9:hover:not(:disabled) {
+  background-color: #3a52c4;
+  transform: translateY(-1px);
+}
+
+.button_button__fXRS9:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Title styling */
+.text-36-600 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Note section */
+.note_note_wrapper__5N_VK {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: #fff8e1;
+  border: 1px solid #ffc107;
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.note_note_wrapper__5N_VK img {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.note_note_wrapper__5N_VK p {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Horizontal separator */
+.horizontal-separator_horizonal_seperator__01Te6 {
+  height: 1px;
+  background-color: #e0e0e0;
+  border: none;
+  margin: 2rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .w-\[40vw\] {
+    width: 100%;
+    height: 30vh;
+    min-height: 200px;
+    min-width: auto;
+  }
+  
+  .w-\[60vw\] {
+    width: 100%;
+    min-width: auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  .text-36-600 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .w-\[60vw\] {
+    padding: 1.5rem 1rem;
+  }
+  
+  .text-36-600 {
+    font-size: 2.4rem;
+  }
+  
+  .w-\[40vw\] {
+    height: 25vh;
+    min-height: 150px;
+  }
+}

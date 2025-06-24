@@ -1,0 +1,363 @@
+/* Custom CSS fixes for the reset password page */
+
+/* Fix responsive layout issues */
+@media (max-width: 768px) {
+  .w-\[40vw\] {
+    width: 100% !important;
+    display: none; /* Hide left panel on mobile */
+  }
+  
+  .w-\[60vw\] {
+    width: 100% !important;
+  }
+  
+  .pl-\[12vw\] {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  .mt-\[17rem\] {
+    margin-top: 4rem !important;
+  }
+  
+  .w-\[35\.4rem\] {
+    width: 100% !important;
+    max-width: 35.4rem;
+  }
+}
+
+/* Fix password input icon positioning */
+.input_input_container___zfQG {
+  position: relative;
+}
+
+.input_input_container___zfQG .flex.flex-row {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.input_input_container___zfQG .flex.flex-row img {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.input_input_container___zfQG .flex.flex-row:hover img {
+  opacity: 1;
+}
+
+/* Fix input padding to accommodate the icon */
+.input_input_container___zfQG input[type="password"] {
+  padding-right: 3rem !important;
+}
+
+/* Improve form container spacing */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Better button styling */
+.button_button__fXRS9 {
+  transition: all 0.2s ease;
+  font-size: 1.6rem;
+  font-weight: 600;
+  min-height: 4.4rem;
+}
+
+.button_button__fXRS9:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(73, 101, 210, 0.3);
+}
+
+/* Improve input field styling */
+.input_input_container___zfQG {
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  min-height: 5.6rem;
+}
+
+.input_input_container___zfQG:hover {
+  border-color: var(--main-blue, #4965d2);
+}
+
+/* Fix label positioning for better UX */
+.input_input_container___zfQG .input_label__FUu5J {
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Better focus states */
+.input_input_container___zfQG.input_has_focus__jQObH {
+  box-shadow: 0 0 0 3px rgba(73, 101, 210, 0.1);
+}
+
+/* Improve note/warning section */
+.note_note_wrapper__5N_VK {
+  border: 1px solid #e1e5e9;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.6rem;
+}
+
+.note_note_wrapper__5N_VK p {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #495057;
+}
+
+/* Fix hero section text that appears empty */
+.hero-section_hero_details_title__WaPFn::before {
+  content: "Trade with Confidence";
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--light-300, #f2f2f2);
+  font-family: Inter, sans-serif;
+}
+
+/* Improve overall layout */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Fix z-index issues */
+.z-30 {
+  z-index: 30;
+}
+
+/* Improve horizontal separator */
+.horizontal-separator_horizonal_seperator__01Te6 {
+  border-top: 1px solid #e9ecef;
+  margin: 2rem 0;
+}
+
+/* Better mobile responsiveness for the hero section */
+@media (max-width: 768px) {
+  .hero-section_hero_details_title__WaPFn::before {
+    font-size: 2rem;
+  }
+  
+  .hero-section_hero_details_desc__2WqSy {
+    font-size: 1.4rem;
+  }
+}
+
+/* Fix potential image loading issues */
+img[alt="background-screen"],
+img[alt="background-image"] {
+  object-fit: cover;
+}
+
+/* Ensure consistent font rendering */
+body, input, button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix any potential overflow issues */
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* Additional improvements for better UX */
+
+/* Ensure proper spacing and alignment */
+.w-\[35\.4rem\] {
+  width: 100%;
+  max-width: 35.4rem;
+}
+
+/* Fix main layout container */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Improve left panel background */
+.w-\[40vw\] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Better image handling for hero section */
+.w-\[40vw\] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fix right panel scrolling */
+.h-screen.overflow-y-auto {
+  background-color: #ffffff;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Improve form section positioning */
+.mt-\[17rem\].pl-\[12vw\] {
+  margin-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+}
+
+/* Center the form content */
+.w-\[35\.4rem\].flex.flex-col {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Better title styling */
+.text-36-600 {
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Improve input container spacing */
+.relative.mb-20,
+.relative.mb-32 {
+  margin-bottom: 1.5rem;
+}
+
+/* Button improvements */
+.button_button__fXRS9 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Fix horizontal separator */
+.horizontal-separator_horizonal_seperator__01Te6 {
+  margin: 1.5rem 0;
+  border-color: #e5e5e5;
+}
+
+/* Improve note section */
+.note_note_wrapper__5N_VK {
+  margin-top: 1rem;
+  border-left: 4px solid #ffc107;
+  background-color: #fff8e1;
+}
+
+/* Tablet responsive design */
+@media (max-width: 1024px) {
+  .w-\[40vw\] {
+    width: 35%;
+  }
+  
+  .w-\[60vw\] {
+    width: 65%;
+  }
+  
+  .pl-\[12vw\] {
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .w-\[40vw\] {
+    width: 100%;
+    height: 30vh;
+    min-height: 200px;
+  }
+  
+  .w-\[60vw\] {
+    width: 100%;
+  }
+  
+  .mt-\[17rem\].pl-\[12vw\] {
+    margin-top: 2rem;
+    padding: 2rem 1.5rem;
+    min-height: 70vh;
+  }
+  
+  .text-36-600 {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+  }
+  
+  .note_note_wrapper__5N_VK {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .mt-\[17rem\].pl-\[12vw\] {
+    padding: 1.5rem 1rem;
+  }
+  
+  .text-36-600 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  
+  .w-\[40vw\] {
+    height: 25vh;
+    min-height: 150px;
+  }
+}
+
+/* Accessibility improvements */
+.input_input__nPe_8:focus {
+  outline: 2px solid #4965d2;
+  outline-offset: 2px;
+}
+
+.button_button__fXRS9:focus {
+  outline: 2px solid #4965d2;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Fix any layout shift issues */
+.hero-section_hero_details_title__WaPFn,
+.hero-section_hero_details_desc__2WqSy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure proper loading state */
+body {
+  opacity: 1;
+  visibility: visible;
+}
